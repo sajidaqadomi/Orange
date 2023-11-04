@@ -1,0 +1,29 @@
+{
+  "name": "orange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "1": "echo 1",
+    "allure:report": "allure generate task-results --clean -o task-report",
+    "allure:clear": "npm run clear:allure && npm run clear:cypress",
+    "clear:allure": "rimraf allure-results task-results-aggregated-files task-report",
+    "clear:cypress": "rimraf cypress/screenshots cypress/videos",
+    "cypress": "npm run allure:clear && npx cypress run --browser chrome --spec cypress/e2e/OrangeHRM/PIM/reports/employee-report-spec.cy.ts --env allure=true || npm run 1 && npm run allure:report",
+    "ul-regression-allure": "npx cypress run --browser chrome --spec cypress/e2e/OrangeHRM/PIM/reports/employee-report-spec.cy.ts --env allure=true && npm run allure:report",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SajidaQadomi",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "12.14.0",
+    "typescript": "^5.2.2",
+    "allure-commandline": "^2.24.0",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
