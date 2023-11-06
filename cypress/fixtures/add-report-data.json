@@ -1,0 +1,14 @@
+{
+  "selectionCriteria": {
+    "Job Title": "",
+    "Location": ""
+  },
+
+  "displayFields": {
+    "Personal": "Employee First Name",
+    "Job": "Job Title",
+    "Salary": "Amount"
+  },
+
+  "reportName": "End Year"
+}

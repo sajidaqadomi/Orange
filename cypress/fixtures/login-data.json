@@ -1,0 +1,39 @@
+{
+  "validUserNamePassword": {
+    "userName": "Admin",
+    "password": "admin123"
+  },
+  "invalidUserNamePassword": {
+    "userName": "invalid",
+    "password": "invalid"
+  },
+  "validUserInvalidPassword": {
+    "userName": "Admin",
+    "password": "invalid"
+  },
+  "invalidUserValidPassword": {
+    "userName": "invalid",
+    "password": "admin123"
+  },
+  "blankUserValidPassword": {
+    "userName": "",
+    "password": "admin123"
+  },
+  "validUserBlankPassword": {
+    "userName": "Admin",
+    "password": ""
+  },
+  "blankUserBlankPassword": {
+    "userName": "",
+    "password": ""
+  },
+  "passwordSensitive": {
+    "userName": "Admin",
+    "correctPass": "admin123",
+    "casingCorrectPass": "ADMin123"
+  },
+  "messages": {
+    "invalidCredentials": "Invalid credentials",
+    "Required": "Required"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "addEmployeeData": {
+    "firstName": "Charbel",
+    "middleName": "Hawet",
+    "lastName": "Jabi",
+    "empPicture": null,
+    "employeeId": "123456"
+  },
+
+  "updateEmpolyeeJobData": {
+    "empStatusId": 3,
+    "jobCategoryId": 2,
+    "jobTitleId": 1,
+    "joinedDate": "2014-04-23",
+    "locationId": 2,
+    "subunitId": 2
+  },
+
+  "addEmployeeSalaryData": {
+    "salaryComponent": "Best salary ceil",
+    "salaryAmount": "20000",
+    "currencyId": "AFN",
+    "comment": null,
+    "addDirectDeposit": false
+  }
+}
