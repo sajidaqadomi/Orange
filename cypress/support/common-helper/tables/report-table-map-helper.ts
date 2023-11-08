@@ -9,3 +9,15 @@ export const Report_Map_Header: IkeyValue = {
   "Job Title": "jobTitle",
   Amount: "salaryAmount",
 };
+
+export const Employee_Claims_Map_Header: IkeyValue = {
+  "Reference Id": "referenceId",
+  "Employee Name": "employeeName",
+  "Event Name": "eventName",
+  Description: "description",
+  Currency: "currency",
+  "Submitted Date": "submittedDate",
+  Status: "status",
+  Amount: "amount",
+  Actions: "actions",
+};

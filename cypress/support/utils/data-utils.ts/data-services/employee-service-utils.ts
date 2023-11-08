@@ -64,4 +64,28 @@ export default class EmployeeService {
         return ApiEmployeesHelper.addEmployeeSalary(empNumber, salaryData);
       });
   }
+
+  /**
+   * Creates an employee with login details.
+   *
+   * @returns A Promise that resolves with the created employee data including login details.
+   */
+  static createEmployeeWithLoginDetails() {
+    return cy
+      .fixture("employees-data")
+      .its("employeeWithLoginData")
+      .then((employeeData: any) => {
+        employeeData.username = GenericMethods.randomString(
+          employeeData.username
+        );
+
+        this.createEmployee().then((employeeRes) => {
+          const { empNumber } = employeeRes.data;
+          employeeData.empNumber = empNumber;
+        });
+
+        // Call the API
+        return ApiEmployeesHelper.addEmployeeLoginDetails(employeeData);
+      });
+  }
 }
