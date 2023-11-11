@@ -43,5 +43,6 @@ describe("Generate an Employee report", () => {
   it("The employee report should have a valid name, headers and rows of data that matched with added ones.", () => {
     viewReportsPage.clickAddNewReport();
     addReportPage.addReport(reportData);
+    addReportPage.validateReport(reportData);
   });
 });

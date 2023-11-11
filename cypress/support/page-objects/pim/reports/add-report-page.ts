@@ -159,6 +159,13 @@ class AddReportPage {
     this.addDisplayFields(displayFields);
     this.checkIncludeHeaders();
     this.clickSaveReportBtn();
+  }
+
+  /**
+   * Validate report data.
+   * @param {IReportData} reportData - The report data to use for validate.
+   */
+  validateReport(reportData: IReportData) {
     ToastMessage.verifyToastMessage(EToastMessages.SUCCESS);
     this.waitGetReportData().then(() => {
       this.verifyReportDat(reportData);
