@@ -2,7 +2,7 @@ export enum ECalimActions {
   CANCEL = "CANCEL",
   SUBMIT = "SUBMIT",
   APPROVE = "APPROVE",
-  REJECT = "REJECT",
+  REJECT = "REJECT"
 }
 
 export enum EClaimStatus {
@@ -10,5 +10,5 @@ export enum EClaimStatus {
   SUBMITTED = "SUBMITTED",
   REGECTED = "Rejected",
   PAID = "Paid",
-  CANCELLED = "Cancelled",
+  CANCELLED = "Cancelled"
 }
