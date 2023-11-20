@@ -22,5 +22,12 @@
     "currencyId": "AFN",
     "comment": null,
     "addDirectDeposit": false
+  },
+  "employeeWithLoginData": {
+    "empNumber": 0,
+    "password": "testTEST@1234",
+    "status": true,
+    "userRoleId": 2,
+    "username": "Jone"
   }
 }

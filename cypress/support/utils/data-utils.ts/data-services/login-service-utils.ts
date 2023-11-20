@@ -21,4 +21,23 @@ export default class LoginService {
         return loginPage.login(userName, password);
       });
   }
+
+  /**
+   * Performs a login operation as an employee using the provided employee name.
+   *
+   * @param {string} employeeName - The employee's name for login.
+   * @returns A Promise that resolves when the login as an employee is successful.
+   */
+  static loginAsEmployee(employeeName: string) {
+    cy.fixture("employees-data").as("employeeInfo");
+    return cy
+      .get("@employeeInfo")
+      .its("employeeWithLoginData")
+      .then((employeeCredentials) => {
+        employeeCredentials.username = employeeName;
+        const { username, password } = employeeCredentials;
+        //Call The API
+        return loginPage.login(username, password);
+      });
+  }
 }

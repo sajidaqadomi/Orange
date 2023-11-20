@@ -5,11 +5,6 @@ export interface ICreateEmployeeReq {
   employeeId: string;
   empPicture: any;
 }
-
-export interface IDeleteEmployeeReq {
-  ids: number[];
-}
-
 export interface IUpdateEmpolyeeJobReq {
   empStatusId?: number;
   jobCategoryId?: number;
@@ -25,4 +20,12 @@ export interface IAddEmployeeSalaryReq {
   currencyId: string;
   comment: string | null;
   addDirectDeposit: boolean;
+}
+
+export interface IAddEmployeeLoginDetailsReq {
+  empNumber: number;
+  password: string;
+  status: boolean;
+  userRoleId: number;
+  username: string;
 }

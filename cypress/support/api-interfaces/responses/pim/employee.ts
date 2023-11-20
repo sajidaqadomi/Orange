@@ -85,3 +85,33 @@ export interface IAddEmployeeSalaryRes {
   };
   rels: any[];
 }
+
+export interface IAddEmployeeLoginDetailsRes {
+  data: {
+    id: number;
+    userName: string;
+    deleted: boolean;
+    status: boolean;
+    employee: {
+      empNumber: number;
+      employeeId: number;
+      firstName: string;
+      middleName: string;
+      lastName: string;
+      terminationId: any;
+    };
+    userRole: {
+      id: number;
+      name: string;
+      displayName: string;
+    };
+  };
+  meta: any[];
+  rels: any[];
+}
+
+export interface IDeleteEmployeeRes {
+  data: number[];
+  meta: any[];
+  rels: any[];
+}

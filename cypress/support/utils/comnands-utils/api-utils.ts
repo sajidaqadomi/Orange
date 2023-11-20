@@ -1,4 +1,4 @@
-import { IHttpMethod } from "../enums/api-enum";
+import { IHttpMethod } from "../../enums/api-enum";
 
 export {};
 declare global {

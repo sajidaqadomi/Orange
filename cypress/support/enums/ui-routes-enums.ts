@@ -8,7 +8,7 @@ export enum NavigationPath {
   Leave = "/leave/viewLeaveList",
   Time = "/time/viewEmployeeTimesheet",
   Recruitment = "/recruitment/viewCandidates",
-  MyInfo = "/pim/viewPersonalDetails/empNumber/7",
+  MyInfo = "/pim/viewPersonalDetails/empNumber",
   Performance = "/performance/searchEvaluatePerformanceReview",
   Dashboard = "/dashboard/index",
   Directory = "/directory/viewDirectory",
@@ -16,4 +16,6 @@ export enum NavigationPath {
   Claim = "/claim/viewAssignClaim",
   Buzz = "/buzz/viewBuzz",
   viewReports = "/pim/viewDefinedPredefinedReports",
+  ViewassignClaimById = "/claim/assignClaim/id",
+  ViewAllAssignClaim = "claim/viewAssignClaim",
 }

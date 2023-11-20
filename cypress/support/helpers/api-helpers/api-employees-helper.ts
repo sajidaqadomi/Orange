@@ -1,15 +1,17 @@
 import {
+  IAddEmployeeLoginDetailsReq,
   IAddEmployeeSalaryReq,
   ICreateEmployeeReq,
-  IDeleteEmployeeReq,
   IUpdateEmpolyeeJobReq,
 } from "../../api-interfaces/payloads/pim/employee";
+import { ISharedDeleteReq } from "../../api-interfaces/payloads/shared-payloads";
 import {
+  IAddEmployeeLoginDetailsRes,
   IAddEmployeeSalaryRes,
   ICreateEmployeeRes,
-  IDeleteEmployeeRes,
   IUpdateEmpolyeeJobRes,
 } from "../../api-interfaces/responses/pim/employee";
+import { ISharedDeleteRes } from "../../api-interfaces/responses/shared-reponse";
 import { EAPIMethods } from "../../enums/api-enum";
 
 /**
@@ -21,6 +23,7 @@ const URLS = {
     `/api/v2/pim/employees/${empNumber}/job-details`,
   addSalaryUrl: (employeeNumber: number) =>
     `/api/v2/pim/employees/${employeeNumber}/salary-components`,
+  userWithLoginDetailUrl: () => "/api/v2/admin/users",
 };
 
 /**
@@ -35,8 +38,8 @@ class Employees {
     );
   }
 
-  static deleteEmployee(data: IDeleteEmployeeReq) {
-    return cy.APIRequest<IDeleteEmployeeReq, IDeleteEmployeeRes>(
+  static deleteEmployee(data: ISharedDeleteReq) {
+    return cy.APIRequest<ISharedDeleteReq, ISharedDeleteRes>(
       EAPIMethods.DELETE,
       URLS.userUrl(),
       data
@@ -57,6 +60,13 @@ class Employees {
       URLS.addSalaryUrl(empNumber),
       data
     );
+  }
+
+  static addEmployeeLoginDetails(data: IAddEmployeeLoginDetailsReq) {
+    return cy.APIRequest<
+      IAddEmployeeLoginDetailsReq,
+      IAddEmployeeLoginDetailsRes
+    >(EAPIMethods.POST, URLS.userWithLoginDetailUrl(), data);
   }
 }
 
