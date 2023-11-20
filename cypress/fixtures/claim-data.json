@@ -1,0 +1,26 @@
+{
+  "claimEvent": {
+    "name": "YOYOO-event",
+    "description": "You hhh",
+    "status": true
+  },
+  "claimExpense": {
+    "name": "YoYOO-expense",
+    "description": "expense-description",
+    "status": true
+  },
+  "calimRequest": {
+    "claimEventId": 1,
+    "currencyId": "AFN",
+    "remarks": null
+  },
+  "assignExpenseToClaim": {
+    "expenseTypeId": 3,
+    "date": "2023-11-07",
+    "amount": "55.00",
+    "note": null
+  },
+  "claimAction": {
+    "action": "SUBMIT"
+  }
+}

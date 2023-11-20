@@ -2,6 +2,7 @@ import { defineConfig } from "cypress";
 import allureWriter from "@shelex/cypress-allure-plugin/writer";
 
 module.exports = defineConfig({
+  projectId: "7zfq8n",
   e2e: {
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
